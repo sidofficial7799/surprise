@@ -197,7 +197,7 @@ button:hover {
 .music-btn {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 5px;
     background: #ff4081;
     border: none;
     padding: 10px 20px;
