@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Braxston', cursive;
+    background: linear-gradient(120deg, #ff758c, #ff7eb3);
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    background: rgba(255, 0, 76, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    margin: 0 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    text-shadow: 0px 0px 15px #fff;
+    transform: scale(1.1);
+}
+
+section {
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-content {
+    flex: 1;
+    text-align: left;
+}
+
+.gif-container {
+    flex: 1;
+    text-align: center;
+}
+
+.responsive-gif {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h6 {
+    font-family: 'Copyright House Industries', cursive;
+    font-size: 1rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.animated-text {
+    font-size: 1.8rem;
+    animation: fadeIn 3s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0.6; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+    }
+
+    .text-content, .gif-container {
+        text-align: center;
+    }
+
+    .responsive-gif {
+        max-width: 80%;
+    }
+}
+
+#reveal-btn {
+    background: #ff4081;
+    border: none;
+    padding: 15px 35px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s;
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+#reveal-btn:hover {
+    transform: scale(1.2);
+    background: #ff1c62;
+}
+
+#surprise-content {
+    display: none;
+    animation: popIn 1s ease-in-out;
+    margin-top: 20px;
+}
+@keyframes popIn {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.slideshow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 20px;
+}
+.slideshow img {
+    width: 320px;
+    height: 420px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+.slideshow img:hover {
+    transform: scale(1.1);
+}
+
+form {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 25px;
+    border-radius: 12px;
+    display: inline-block;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+input, textarea, button {
+    width: 100%;
+    margin: 12px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+}
+button {
+    background: #ff4081;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+button:hover {
+    background: #ff1c62;
+}
+
+/* Music Control Button */
+.music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff4081;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+.music-btn:hover {
+    transform: scale(1.1);
+    background: #ff1c62;
+}
