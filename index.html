@@ -4,104 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valentine's Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <style>
-        body {
-            font-family: 'Times New Roman', sans-serif;
-            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
-            text-align: center;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 10px;
-            background: rgba(255, 0, 76, 0.8);
-            border-radius: 10px;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 20px;
-            transition: 0.3s;
-        }
-        nav ul li a:hover {
-            text-shadow: 0px 0px 10px #fff;
-        }
-        section {
-            padding: 50px 20px;
-            min-height: 100vh;
-        }
-        .animated-text {
-            font-size: 2rem;
-            animation: fadeIn 2s ease-in-out infinite alternate;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0.6; }
-            to { opacity: 1; }
-        }
-        #reveal-btn {
-            background: #ff4081;
-            border: none;
-            padding: 15px 30px;
-            font-size: 20px;
-            color: white;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        #reveal-btn:hover {
-            transform: scale(1.1);
-        }
-        #surprise-content {
-            display: none;
-            animation: popIn 1s ease-in-out;
-        }
-        @keyframes popIn {
-            from { transform: scale(0); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-        .slideshow {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            overflow-x: auto;
-            padding: 20px;
-        }
-        .slideshow img {
-            width: 300px;
-            height: 400px;
-            border-radius: 15px;
-            box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
-        }
-        form {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
-            border-radius: 10px;
-            display: inline-block;
-        }
-        input, textarea, button {
-            width: 100%;
-            margin: 10px 0;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-        }
-        button {
-            background: #ff4081;
-            color: white;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
+    <!-- Background Music -->
+    <audio id="background-music" loop>
+        <source src="D:\saran\song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -112,32 +24,36 @@
     </nav>
 
     <section id="home">
-        <h1 class="font-family">My Love for You as follows</h1>
-        <h5><p class="animated-text">You are the light of my life dear.</p></h5>
-        <p class="animated-text", class="font-family">Love is not just about words but the silent understanding between two souls. It is the patience to listen, even when nothing is spoken, and the ability to see flaws yet choose to stay and nurture growth. True love thrives on trust, respect, and support, creating a bond that deepens with time. It is about giving without expecting in return, finding joy in the happiness of the other. Love is not about perfection but about embracing imperfections together, growing side by side. During good times and bad times, I want you to know that I will always love you. You must be the happiest on the Earth. Your beauty inside and out can never be explained, your wisdom is unparalleled, and your kindness is incomparable. In the end, it is the strength of connection that defines love, not the absence of struggles</p>
-        <p>After reading, scroll up and click next section, ie. Surprise</p>
+        <h1>My Love for You</h1>
+        <p class="animated-text">You are the light of my life, dear.</p>
+        <p class="animated-text">Love is not just about words but the silent understanding between two souls. It is the patience to listen, even when nothing is spoken, and the ability to see flaws yet choose to stay and nurture growth. True love thrives on trust, respect, and support, creating a bond that deepens with time. It is about giving without expecting in return, finding joy in the happiness of the other. Love is not about perfection but about embracing imperfections together, growing side by side. During good times and bad times, I want you to know that I will always love you. You must be the happiest on the Earth. Your beauty inside and out can never be explained, your wisdom is unparalleled, and your kindness is incomparable. In the end, it is the strength of connection that defines love, not the absence of struggles.</p>
+        <div class="gif-container">
+            <img src="romantic.gif" width="220" height="320" alt="Romantic GIF" class="responsive-gif" >
+        </div>
+        <p>Click the next section, i.e., Surprise.</p>
     </section>
 
     <section id="surprise">
-        <button id="reveal-btn" onclick="showSurprise()">Click for a Surprise</button>
+        <button id="reveal-btn">Click for a Surprise</button>
         <div id="surprise-content">
-            <img src="Main.jpg" width="300" height="400" alt="Our Picture" class="animated">
-            <h2>Happy Valentine's Day!</h2>
-            <p>After this, scroll up and click next section, ie. Memories</p>
+            <img src="Main.jpg" width="320" height="420" alt="Our Picture">
+            <h6>Happy Valentine's Day!....Hmmmmmmm, what to call? Hope JAYSID will be perfect....Happy Valentine's Day JaySid 🥹❤️</h6>
+            <p>Click the next section, i.e., Memories.</p>
         </div>
-        
     </section>
 
     <section id="memories">
-        <h1 contenteditable="center">Memories</h1>
+        <h1>Memories</h1>
         <div class="slideshow">
             <img src="side3.jpg" alt="Memory 1">
             <img src="side1.jpg" alt="Memory 2">
             <img src="side2.jpg" alt="Memory 3">
         </div>
-        <p class="caption">Do you remember all these my dear...</p>
-        <p>If you are disappointed with this work, you may scroll up and go to contact section. There you can raise your complaint about this work.</p>
-        <p>If you need to appreciate this work, head towards New colony on next Wednesday my dear 😜</p>
+        <div>
+            <p class="caption">Do you remember all these, my dear... These momemts are the most cherished among all ❤️</p>
+            <p>If you are disappointed with this work, you may go to the contact section. There, you can raise your complaint about this work.</p>
+            <p>If you need to appreciate this work, you should go to New Colony next Wednesday my dear, there you can give rewards 😜.</p>
+        </div>
     </section>
 
     <section id="contact">
@@ -152,10 +68,73 @@
         </form>
     </section>
 
-    <script>
-        function showSurprise() {
-            document.getElementById("surprise-content").style.display = "block";
-        }
-    </script>
+    <!-- Music Control Button -->
+    <button id="music-control" class="music-btn">🎵 Play Music</button>
+</body>
+</html>
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#surprise">Surprise</a></li>
+            <li><a href="#memories">Memories</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>My Love for You</h1>
+        <p class="animated-text">You are the light of my life, dear.</p>
+        <p class="animated-text", class="font-family">Love is not just about words but the silent understanding between two souls. It is the patience to listen, even when nothing is spoken, and the ability to see flaws yet choose to stay and nurture growth. True love thrives on trust, respect, and support, creating a bond that deepens with time. It is about giving without expecting in return, finding joy in the happiness of the other. Love is not about perfection but about embracing imperfections together, growing side by side. During good times and bad times, I want you to know that I will always love you. You must be the happiest on the Earth. Your beauty inside and out can never be explained, your wisdom is unparalleled, and your kindness is incomparable. In the end, it is the strength of connection that defines love, not the absence of struggles</p>
+        <p>After reading, scroll up and click next section, ie. Surprise</p>
+    </section>
+
+    <section id="surprise">
+        <button id="reveal-btn">Click for a Surprise</button>
+        <div id="surprise-content">
+            <img src="Main.jpg" width="320" height="420" alt="Our Picture">
+            <h2>Happy Valentine's Day!</h2>
+            <p>After this, scroll up and click next section, ie. Memories</p>
+        </div>
+    </section>
+
+    <section id="memories">
+        <h1>Memories</h1>
+        <div class="slideshow">
+            <img src="side3.jpg" alt="Memory 1">
+            <img src="side1.jpg" alt="Memory 2">
+            <img src="side2.jpg" alt="Memory 3">
+        </div>
+        <div>
+            <p class="caption">Do you remember all these my dear...</p>
+            <p>If you are disappointed with this work, you may scroll up and go to contact section. There you can raise your complaint about this work.</p>
+            <p>If you need to appreciate this work, head towards New colony on next Wednesday my dear 😜</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: siddharthmoorthy@gmail.com</p>
+        <p>Phone: 6263189027</p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Complaint" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
 </body>
 </html>
