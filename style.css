@@ -135,6 +135,16 @@ h6 {
     to { transform: scale(1); opacity: 1; }
 }
 
+#surprise-content video {
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+#surprise-content video:hover {
+    transform: scale(1.05);
+}
+
 /* Slideshow Container */
 .slideshow {
     display: flex;
